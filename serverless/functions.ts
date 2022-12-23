@@ -53,6 +53,19 @@ const functions: AWS['functions'] = {
       },
     ],
   },
+  createIdea: {
+    handler: 'src/functions/createIdea/index.handler',
+    events: [
+      {
+        http: {
+          method: 'post',
+          path: '/ideas',
+
+          // authorizer,
+        },
+      },
+    ],
+  },
 };
 
 export default functions;

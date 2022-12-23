@@ -40,6 +40,19 @@ const functions: AWS['functions'] = {
       },
     ],
   },
+  getBoard: {
+    handler: 'src/functions/getBoard/index.handler',
+    events: [
+      {
+        http: {
+          method: 'get',
+          path: '/boards/{boardId}',
+
+          // authorizer,
+        },
+      },
+    ],
+  },
 };
 
 export default functions;

@@ -21,7 +21,7 @@ const functions: AWS['functions'] = {
         http: {
           method: 'post',
           path: '/boards',
-
+          cors: true,
           authorizer,
         },
       },
@@ -34,6 +34,7 @@ const functions: AWS['functions'] = {
         http: {
           method: 'get',
           path: '/boards',
+          cors: true,
         },
       },
     ],
@@ -45,6 +46,7 @@ const functions: AWS['functions'] = {
         http: {
           method: 'get',
           path: '/boards/{boardId}',
+          cors: true,
         },
       },
     ],
@@ -56,7 +58,7 @@ const functions: AWS['functions'] = {
         http: {
           method: 'post',
           path: '/ideas',
-
+          cors: true,
           authorizer,
         },
       },
@@ -69,7 +71,7 @@ const functions: AWS['functions'] = {
         http: {
           method: 'post',
           path: '/ideas/{ideaId}',
-
+          cors: true,
           authorizer,
         },
       },
